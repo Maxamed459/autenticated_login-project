@@ -1,0 +1,21 @@
+{% extends "users/layout.html"%}
+
+{% block body %}
+
+    {% if message %}
+        <div class="invalid">
+            <h1>{{ message }}</h1>
+        </div>
+    {% endif %}
+    <div class="hero">
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <input autocomplete="off" autofocus type="text" name="username" placeholder="Username"><br>
+            <input type="password" name="password" placeholder="Password"><br>
+            <input type="submit" value="Login">
+            <p>Dont have account <a href="">Register Here</a></p>
+        </form>
+        
+    </div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "users/layout.html" %}
+
+{% block body %}
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li class="user"><a href="#">User: {{ request.user.username }}</a></li>
+                <li class="logout"><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <div class="home">
+        <div class="text">
+            <h1>Hi i'm <span>MOH4</span></h1>
+            <p>Here you can dream and your dream becames True <br>
+            becouse here you can find any thing you dream.
+            </p>
+        </div>
+    </div>
+{% endblock %}

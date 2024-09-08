@@ -1,0 +1,16 @@
+{% extends "users/layout.html" %}
+
+{% block body %}
+    <div class="hero">
+        <form action="register" method="post">
+            {% csrf_token %}
+            <input autocomplete="off" autofocus type="text" placeholder="First_Name"><br>
+            <input autocomplete="off" autofocus type="text" placeholder="Last_Name"><br>
+            <input autocomplete="off" autofocus type="text" placeholder="Username"><br>
+            <input autocomplete="off" autofocus type="text" placeholder="Email"><br>
+            <input autocomplete="off" type="password" placeholder="Password"><br>
+            <input type="submit" value="Register">
+            
+        </form>
+    </div>
+{% endblock %}
